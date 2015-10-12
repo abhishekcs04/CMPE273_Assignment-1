@@ -97,10 +97,9 @@ conn, err := net.Dial("tcp", "localhost:1234")
 	   
 	   }
       
-	  fmt.Print("[\"",reply.Shares[x_count])
+	   fmt.Print("(",reply.Shares[x_count])
 	  fmt.Print(":",reply.Quantity[x_count])
-	  fmt.Print(":$",reply.Price[x_count],"\"]")
-	
+	  fmt.Print(":$",reply.Price[x_count],")")
 	}
 	
 	fmt.Println()
@@ -126,7 +125,7 @@ conn, err := net.Dial("tcp", "localhost:1234")
 	
 	fmt.Println("Transaction Number :",reply.Transaction_Number)
 	fmt.Println()
-	fmt.Print("Portfolio (Stock Holdings) :")
+	fmt.Print("Portfolio  :")
 	
 	for count:=0;count<len(reply.Shares);count++ {
 	   
